@@ -1,6 +1,58 @@
 {
   "version": 1,
   "projects": {
+    "feature-home": {
+      "projectType": "library",
+      "root": "libs/feature/home",
+      "sourceRoot": "libs/feature/home/src",
+      "prefix": "sarafan",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature/home"],
+          "options": {
+            "jestConfig": "libs/feature/home/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/home/src/**/*.ts",
+              "libs/feature/home/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": ["feature"]
+    },
+    "feature-profile": {
+      "projectType": "library",
+      "root": "libs/feature/profile",
+      "sourceRoot": "libs/feature/profile/src",
+      "prefix": "sarafan",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature/profile"],
+          "options": {
+            "jestConfig": "libs/feature/profile/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/profile/src/**/*.ts",
+              "libs/feature/profile/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": ["feature"]
+    },
     "shop": {
       "projectType": "application",
       "root": "apps/shop",
